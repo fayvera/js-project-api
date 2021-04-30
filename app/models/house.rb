@@ -1,3 +1,3 @@
 class House < ApplicationRecord
-    # has_many :options
+    has_many :options
 end

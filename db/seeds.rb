@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+House.create(name: "Gryffindor")
+House.create(name: "Slytherin")
+House.create(name: "Ravenclaw")
+House.create(name: "Hufflepuff")
+
+Question.create(title: "What's your favorite color?")
+Question.create(title: "What's your favorite food?")

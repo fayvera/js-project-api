@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_231954) do
+ActiveRecord::Schema.define(version: 2021_04_30_003628) do
 
   create_table "houses", force: :cascade do |t|
     t.string "name"
@@ -19,8 +19,8 @@ ActiveRecord::Schema.define(version: 2021_04_29_231954) do
   end
 
   create_table "options", force: :cascade do |t|
-    t.integer "question_id"
-    t.integer "house_id"
+    t.integer "question_id", null: false
+    t.integer "house_id", null: false
     t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -34,4 +34,6 @@ ActiveRecord::Schema.define(version: 2021_04_29_231954) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "options", "houses"
+  add_foreign_key "options", "questions"
 end

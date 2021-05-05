@@ -5,8 +5,8 @@ class SelectedAnswer < ApplicationRecord
   belongs_to :option
 
   def sorting
-    if params = "Gryffindor"
-      current_user.house_point_count
+    # if params = "Gryffindor"
+    #   current_user.house_point_count
   end
 
   def attributes

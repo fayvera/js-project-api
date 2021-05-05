@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_020005) do
   create_table "options", force: :cascade do |t|
     t.integer "question_id", null: false
     t.integer "house_id", null: false
-    t.string "content" 
+    t.string "content"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["house_id"], name: "index_options_on_house_id"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 2021_04_30_020005) do
   end
 
   create_table "selected_answers", force: :cascade do |t|
-    t.string "content"
     t.integer "user_id", null: false
     t.integer "option_id", null: false
     t.datetime "created_at", precision: 6, null: false

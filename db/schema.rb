@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_30_003628) do
+ActiveRecord::Schema.define(version: 2021_04_30_020005) do
 
   create_table "houses", force: :cascade do |t|
     t.string "name"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_04_30_003628) do
   create_table "options", force: :cascade do |t|
     t.integer "question_id", null: false
     t.integer "house_id", null: false
-    t.string "content"
+    t.string "content" 
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["house_id"], name: "index_options_on_house_id"
@@ -34,6 +34,24 @@ ActiveRecord::Schema.define(version: 2021_04_30_003628) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "selected_answers", force: :cascade do |t|
+    t.string "content"
+    t.integer "user_id", null: false
+    t.integer "option_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["option_id"], name: "index_selected_answers_on_option_id"
+    t.index ["user_id"], name: "index_selected_answers_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "options", "houses"
   add_foreign_key "options", "questions"
+  add_foreign_key "selected_answers", "options"
+  add_foreign_key "selected_answers", "users"
 end

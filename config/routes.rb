@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :selected_answers
-  resources :users
+  resources :users do 
+    resources :selected_answers
+  end
   resources :options
   resources :questions
   resources :houses

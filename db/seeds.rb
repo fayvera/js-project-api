@@ -13,3 +13,8 @@ House.create(name: "Hufflepuff")
 
 Question.create(title: "What's your favorite color?")
 Question.create(title: "What's your favorite food?")
+
+Option.create(content: "Red", question_id: 1, house_id: "1")
+Option.create(content: "Green", question_id: 1, house_id: "2")
+Option.create(content: "Blue", question_id: 1, house_id: "3")
+Option.create(content: "Yellow", question_id: 1, house_id: "4")

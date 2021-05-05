@@ -5,7 +5,7 @@ include ActiveModel::Serializers::JSON
     has_many :options, through: :selected_answers
     has_many :houses, through: :options
 
-    def self.define_current_user 
+    def self.current_user 
         current_user = User.last
     end
 

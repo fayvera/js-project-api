@@ -4,10 +4,6 @@ class SelectedAnswer < ApplicationRecord
   belongs_to :user
   belongs_to :option
 
-  def sorting
-    # if params = "Gryffindor"
-    #   current_user.house_point_count
-  end
 
   def attributes
     {"user_id" => nil, "option_id" => nil}

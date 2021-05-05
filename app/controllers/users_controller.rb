@@ -8,8 +8,4 @@ class UsersController < ApplicationController
         render json: User.create(name: params["_json"])
     end
 
-    # def updated
-    #     debugger 
-    #     render json: User.update()
-    # end
 end

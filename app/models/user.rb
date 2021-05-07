@@ -20,16 +20,16 @@ include ActiveModel::Serializers::JSON
         gry = new_array.count("Gryffindor")
         rav = new_array.count("Ravenclaw")
 
-        # 
         huf_percent = ((huf * 100) / house.count)
         sly_percent = (sly * 100) / house.count
         gry_percent = (gry * 100) / house.count
         rav_percent = (rav * 100) / house.count
-
+        
+        return {hufflepuff: huf_percent, slytherin: sly_percent, gryffindor: gry_percent, ravenclaw: rav_percent}
     end
 
 
     def attributes
-        {"name" => nil, "id" => nil}
+        {"name" => nil, "id" => nil, "housing" => {}}
     end
 end

@@ -20,12 +20,19 @@ include ActiveModel::Serializers::JSON
         gry = new_array.count("Gryffindor")
         rav = new_array.count("Ravenclaw")
 
-        huf_percent = ((huf * 100) / house.count)
-        sly_percent = (sly * 100) / house.count
-        gry_percent = (gry * 100) / house.count
-        rav_percent = (rav * 100) / house.count
+        if house.count != 0 
+            huf_percent = ((huf * 100) / house.count)
+            sly_percent = (sly * 100) / house.count
+            gry_percent = (gry * 100) / house.count
+            rav_percent = (rav * 100) / house.count
         
-        return {hufflepuff: huf_percent, slytherin: sly_percent, gryffindor: gry_percent, ravenclaw: rav_percent}
+        else
+            huf_percent = 0
+            sly_percent = 0
+            gry_percent = 0
+            rav_percent = 0
+        end
+            return {hufflepuff: huf_percent, slytherin: sly_percent, gryffindor: gry_percent, ravenclaw: rav_percent}
     end
 
 

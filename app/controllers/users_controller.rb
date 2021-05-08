@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     end
 
     def create  
-        render json: User.create(name: params["_json"])
+        render json: User.create(name: params["name"])
     end
 
     def show 

@@ -100,7 +100,7 @@ Option.create(content: "Curse Them", question_id: 13, house_id: "2")
 Option.create(content: "Get More Information to Understand Why They're Doing This", question_id: 13, house_id: "3")
 Option.create(content: "Ignore It", question_id: 13, house_id: "4")
 
-Option.create(content: "Magical Law Enforcemen", question_id: 14, house_id: "1")
+Option.create(content: "Magical Law Enforcement", question_id: 14, house_id: "1")
 Option.create(content: "Curse Breaker", question_id: 14, house_id: "2")
 Option.create(content: "Potioneer", question_id: 14, house_id: "3")
 Option.create(content: "Healer", question_id: 14, house_id: "4")

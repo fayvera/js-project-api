@@ -32,7 +32,7 @@ include ActiveModel::Serializers::JSON
             gry_percent = 0
             rav_percent = 0
         end
-            return {hufflepuff: huf_percent, slytherin: sly_percent, gryffindor: gry_percent, ravenclaw: rav_percent}
+            return {Hufflepuff: huf_percent, Slytherin: sly_percent, Gryffindor: gry_percent, Ravenclaw: rav_percent}
     end
 
 

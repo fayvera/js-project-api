@@ -11,7 +11,7 @@ include ActiveModel::Serializers::JSON
 
     def housing
         new_array = []
-        house = User.current_user.houses
+        house = self.houses
         house.each do |h|
            new_array << h.name
         end

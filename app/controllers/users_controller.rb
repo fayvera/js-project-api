@@ -9,6 +9,6 @@ class UsersController < ApplicationController
     end
 
     def show 
-        render json: User.current_user
+        render json: User.find_by(id: params["id"])
     end
 end
